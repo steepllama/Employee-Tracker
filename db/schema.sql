@@ -22,4 +22,9 @@ CREATE TABLE employee_table(
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id INT 
-)
+
+    CONSTRAINT fk_department_table
+    FOREIGN KEY (department_id)
+    REFERENCES department_table(id)
+    ON DELETE CASCADE
+);
