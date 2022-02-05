@@ -1,3 +1,7 @@
+DROP TABLE IF EXISTS department_table;
+DROP TABLE IF EXISTS role_table;
+DROP TABLE IF EXISTS employee_table;
+
 CREATE TABLE department_table(
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL,
