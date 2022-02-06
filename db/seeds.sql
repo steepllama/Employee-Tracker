@@ -7,12 +7,6 @@ VALUES
 ('Manager'),
 ('Project Manager');
 
-INSERT INTO role_table(department_id, title, salary)
-VALUES
-(1, 'Backroom', 52000),
-(2, 'Sales', 65000),
-(3, 'Manager', 75000),
-(4, 'Project Manager', 85000);
 
 INSERT INTO employee_table(department_id, first_name, last_name)
 VALUES
@@ -20,3 +14,10 @@ VALUES
 (2, 'Brock', 'Onix'),
 (3, 'Misty', 'Starmie'),
 (4, 'Juan', 'Million');
+
+INSERT INTO role_table(department_id, title, salary)
+VALUES
+(1, 'Backroom', 52000),
+(2, 'Sales', 65000),
+(3, 'Manager', 75000),
+(4, 'Project Manager', 85000);

@@ -2,7 +2,17 @@ const inquirer = require('inquirer');
 const mysql2 = require('mysql2');
 const sequelize = require('sequelize');
 // const table = require('console.table');
-const db = require('./db/connection');
+// const db = require('./connection');
+
+const db = mysql2.createConnection(
+    {
+        host: "localhost",
+        user: "root",
+        password: "Manchis1",
+        database: "department_table"
+    },
+    console.log("Now connected to DataBase")
+);
 
 const table = () => {
     inquirer.prompt([
@@ -43,24 +53,24 @@ const table = () => {
             break;
         }
     })
-}
+};
 
 const viewDepts = () => {
     db.query('SELECT * FROM department_table ORDER BY id', function (err, results){
         console.table(results)
     })
-}
+};
 
 const viewEmployees = () => {
     db.query('SELECT * FROM employee_table', function (err, results) {
         console.table(results)
     })
-}
+};
 
 const viewRoles = () => {
     db.query('SELECT * FROM role_table ORDER BY id', function (err, results) {
         console.table(results)
     })
-}
+};
 
 table();
