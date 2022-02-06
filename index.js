@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const mysql2 = require('mysql2');
 const sequelize = require('sequelize');
-const table = require('console.table');
+// const table = require('console.table');
 const db = require('./db/connection');
 
 const table = () => {

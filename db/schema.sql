@@ -15,7 +15,7 @@ CREATE TABLE role_table(
     id INT AUTO_INCREMENT NOT NULL,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL(10,2),
-    department_id INT
+    department_id INT,
     PRIMARY KEY(id)
 
     CONSTRAINT fk_department_table
